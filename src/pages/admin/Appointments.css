@@ -1,0 +1,59 @@
+/* Appointments.css */
+.admin-appointments { padding: 32px 0 64px; min-height: calc(100vh - 72px); background: #f8f9fa; }
+.admin-appointments-loading { min-height: calc(100vh - 72px); display: flex; align-items: center; justify-content: center; }
+.appointments-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
+.appointments-header h1 { font-size: 1.5rem; margin: 0; }
+.header-actions { display: flex; gap: 16px; }
+
+.filters-panel { background: #fff; border-radius: 16px; padding: 24px; margin-bottom: 32px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); animation: slideDown 0.3s ease-out; }
+@keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+.filter-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; align-items: end; }
+.filter-group { display: flex; flex-direction: column; gap: 4px; }
+.filter-group label { font-weight: 500; font-size: 0.875rem; color: #2d3436; }
+.filter-input, .filter-select { padding: 8px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 0.875rem; width: 100%; background: #f8f9fa; transition: border-color 0.2s; }
+.filter-input:focus, .filter-select:focus { outline: none; border-color: #e94560; }
+
+.appointments-list { display: flex; flex-direction: column; gap: 16px; }
+.appointment-item { display: flex; justify-content: space-between; align-items: center; background: #fff; border-radius: 16px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: box-shadow 0.2s; }
+.appointment-item:hover { box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.appointment-info { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; flex: 1; align-items: center; }
+.appointment-shop .shop-name { font-weight: 600; color: #2d3436; }
+.appointment-customer { display: flex; flex-direction: column; }
+.customer-name { font-weight: 500; color: #2d3436; }
+.customer-email { font-size: 0.75rem; color: #636e72; }
+.appointment-service { display: flex; flex-direction: column; }
+.service-name { font-weight: 500; color: #2d3436; }
+.service-price { font-size: 0.875rem; color: #e94560; font-weight: 600; }
+.appointment-datetime { display: flex; flex-direction: column; }
+.appointment-date { font-weight: 500; color: #2d3436; }
+.appointment-time { font-size: 0.875rem; color: #636e72; }
+.appointment-status { flex-shrink: 0; margin-left: 16px; }
+.status-badge { padding: 4px 16px; border-radius: 999px; font-size: 0.875rem; font-weight: 500; text-transform: capitalize; }
+.status-badge.pending { background: #fef9e7; color: #7d6608; }
+.status-badge.confirmed { background: #d4edda; color: #155724; }
+.status-badge.completed { background: #d6eaf8; color: #1a5276; }
+.status-badge.cancelled { background: #fde8e8; color: #922b21; }
+.status-badge.no_show { background: #e8d5d5; color: #6c2e2e; }
+
+.empty-state { text-align: center; padding: 48px 0; }
+.empty-icon { font-size: 3rem; display: block; margin-bottom: 16px; }
+.empty-state h3 { font-size: 1.125rem; margin-bottom: 4px; color: #2d3436; }
+.empty-state p { color: #636e72; }
+
+.pagination { display: flex; justify-content: center; align-items: center; gap: 16px; padding: 24px 0; margin-top: 24px; border-top: 1px solid #e0e0e0; }
+.page-btn { padding: 8px 24px; border: 1px solid #e0e0e0; border-radius: 8px; background: #fff; color: #2d3436; cursor: pointer; transition: all 0.2s; font-weight: 500; }
+.page-btn:hover:not(:disabled) { background: #e94560; color: #fff; border-color: #e94560; }
+.page-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.page-info { color: #636e72; font-size: 0.875rem; }
+
+@media (max-width: 1024px) { .appointment-info { grid-template-columns: 1fr 1fr; gap: 8px; } }
+@media (max-width: 768px) {
+  .appointments-header { flex-direction: column; align-items: stretch; gap: 16px; }
+  .filter-row { grid-template-columns: 1fr; }
+  .appointment-item { flex-direction: column; align-items: stretch; gap: 8px; }
+  .appointment-info { grid-template-columns: 1fr; }
+  .appointment-status { margin-left: 0; text-align: center; }
+  .pagination { flex-wrap: wrap; }
+  .page-btn { padding: 4px 16px; font-size: 0.875rem; }
+}
+@media (max-width: 480px) { .appointment-item { padding: 16px; } }

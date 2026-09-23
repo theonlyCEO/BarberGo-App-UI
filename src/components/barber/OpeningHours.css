@@ -1,0 +1,105 @@
+
+.opening-hours {
+  width: 100%;
+}
+
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-xs) 0;
+  font-size: var(--font-size-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hours-row:last-child {
+  border-bottom: none;
+}
+
+.hours-row.today {
+  background: rgba(233, 69, 96, 0.05);
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  margin: 0 calc(-1 * var(--spacing-sm));
+  padding-left: var(--spacing-sm);
+  padding-right: var(--spacing-sm);
+}
+
+.hours-day {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.today-badge {
+  font-size: var(--font-size-xs);
+  background: var(--color-accent);
+  color: var(--color-text-white);
+  padding: 1px var(--spacing-sm);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+}
+
+.hours-time {
+  color: var(--color-text-light);
+  font-weight: 400;
+}
+
+.hours-time.open {
+  color: var(--color-success);
+}
+
+.hours-time.closed {
+  color: var(--color-error);
+}
+
+.no-hours {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+  text-align: center;
+  padding: var(--spacing-md) 0;
+}
+
+.hours-timezone {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+.timezone-label {
+  margin-right: var(--spacing-xs);
+}
+
+.timezone-value {
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .hours-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) 0;
+  }
+
+  .hours-row.today {
+    padding: var(--spacing-sm);
+  }
+
+  .hours-time {
+    font-size: var(--font-size-sm);
+  }
+}

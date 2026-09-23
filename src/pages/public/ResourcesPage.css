@@ -1,0 +1,95 @@
+.resources-page {
+  padding: var(--spacing-xl) 0 var(--spacing-3xl);
+  min-height: calc(100vh - 72px);
+  background: var(--color-background);
+}
+
+.resources-hero {
+  text-align: center;
+  padding: var(--spacing-3xl) 0;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  border-radius: var(--radius-lg);
+  color: var(--color-text-white);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.resources-hero h1 {
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--spacing-sm);
+}
+
+.resources-hero p {
+  font-size: var(--font-size-lg);
+  opacity: 0.9;
+  margin: 0;
+}
+
+.resources-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.resources-section {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.resources-section h2 {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text);
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.resource-card {
+  background: var(--color-card);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base);
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.resource-card .icon {
+  width: 40px;
+  height: 40px;
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-md);
+}
+
+.resource-card h3 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-sm);
+}
+
+.resource-card p {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+.resource-link {
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+}
+
+.resource-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .resources-hero { padding: var(--spacing-2xl) var(--spacing-md); }
+  .resources-hero h1 { font-size: var(--font-size-3xl); }
+  .resources-grid { grid-template-columns: 1fr; }
+}

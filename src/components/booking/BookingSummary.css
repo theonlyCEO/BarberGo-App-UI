@@ -1,0 +1,138 @@
+.booking-summary {
+  margin: var(--spacing-lg) 0;
+}
+
+.summary-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+}
+
+.summary-section {
+  margin-bottom: var(--spacing-md);
+}
+
+.summary-section:last-of-type {
+  margin-bottom: 0;
+}
+
+.summary-title {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.summary-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.summary-shop-name {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-text);
+}
+
+.summary-shop-address {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-xs) 0;
+}
+
+.summary-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+}
+
+.summary-value {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.summary-value.price {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.summary-value.time {
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+.summary-divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: var(--spacing-md) 0;
+}
+
+/* Notes */
+.notes-input {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color var(--transition-fast);
+  background: var(--color-background);
+}
+
+.notes-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+/* Total */
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--spacing-sm);
+}
+
+.total-label {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.total-price {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .summary-card {
+    padding: var(--spacing-md);
+  }
+
+  .summary-shop-name {
+    font-size: var(--font-size-base);
+  }
+
+  .summary-value.price {
+    font-size: var(--font-size-base);
+  }
+
+  .total-price {
+    font-size: var(--font-size-lg);
+  }
+}

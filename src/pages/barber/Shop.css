@@ -1,0 +1,58 @@
+/* Shop.css */
+.barber-shop { padding: 32px 0 64px; min-height: calc(100vh - 72px); background: #f8f9fa; }
+.barber-shop-loading { min-height: calc(100vh - 72px); display: flex; align-items: center; justify-content: center; }
+.shop-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
+.shop-header h1 { font-size: 1.5rem; margin: 0; }
+.success-message { display: flex; align-items: center; gap: 8px; padding: 16px; background: #d4edda; border-radius: 8px; color: #155724; margin-bottom: 24px; }
+.success-icon { font-size: 1.125rem; font-weight: bold; }
+
+.shop-view { background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+.shop-info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
+.info-section h3 { font-size: 1rem; margin-bottom: 16px; color: #2d3436; border-bottom: 2px solid #e0e0e0; padding-bottom: 8px; }
+.info-item { display: flex; flex-direction: column; gap: 4px; padding: 4px 0; }
+.info-item:not(:last-child) { border-bottom: 1px solid #e0e0e0; }
+.info-label { font-size: 0.75rem; color: #636e72; text-transform: uppercase; letter-spacing: 0.5px; }
+.info-value { font-size: 0.875rem; color: #2d3436; }
+.shop-map-wrapper { border-radius: 8px; overflow: hidden; margin: 8px 0; }
+.shop-photos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.shop-photo { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; }
+
+.shop-form { background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+.form-section { margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid #e0e0e0; }
+.form-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.form-section h3 { font-size: 1rem; margin-bottom: 16px; color: #2d3436; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 4px; }
+.form-group label { font-weight: 500; font-size: 0.875rem; color: #2d3436; }
+.form-input { padding: 16px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; transition: all 0.2s; width: 100%; background: #f8f9fa; font-family: inherit; }
+.form-input:focus { outline: none; border-color: #e94560; box-shadow: 0 0 0 3px rgba(233,69,96,0.1); }
+.form-input:disabled { opacity: 0.6; cursor: not-allowed; }
+.form-select { padding: 16px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; transition: all 0.2s; width: 100%; background: #f8f9fa; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23636e72' stroke-width='2' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 32px; }
+.form-select:focus { outline: none; border-color: #e94560; box-shadow: 0 0 0 3px rgba(233,69,96,0.1); }
+.form-hint { font-size: 0.875rem; color: #636e72; margin: 0 0 8px 0; }
+.location-controls { display: flex; gap: 16px; margin-bottom: 16px; }
+.coord-display { display: flex; gap: 24px; padding: 8px; background: #f8f9fa; border-radius: 4px; font-family: monospace; font-size: 0.875rem; color: #636e72; }
+.form-actions { display: flex; gap: 16px; margin-top: 32px; padding-top: 32px; border-top: 1px solid #e0e0e0; }
+
+.photo-upload-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; margin-top: 8px; }
+.photo-item { position: relative; aspect-ratio: 1; border-radius: 8px; overflow: hidden; }
+.photo-item img { width: 100%; height: 100%; object-fit: cover; }
+.photo-delete-btn { position: absolute; top: 4px; right: 4px; background: rgba(0,0,0,0.5); color: #fff; border: none; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.75rem; }
+.photo-delete-btn:hover { background: #e74c3c; }
+.photo-upload-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; aspect-ratio: 1; border: 2px dashed #e0e0e0; border-radius: 8px; background: #f8f9fa; color: #636e72; cursor: pointer; transition: all 0.2s; }
+.photo-upload-btn:hover { border-color: #e94560; color: #e94560; background: rgba(233,69,96,0.05); }
+.upload-icon { font-size: 1.5rem; }
+
+@media (max-width: 768px) {
+  .shop-header { flex-direction: column; align-items: stretch; gap: 16px; }
+  .shop-info-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .shop-view, .shop-form { padding: 24px; }
+  .form-actions { flex-direction: column; }
+  .form-actions .btn { width: 100%; }
+  .location-controls { flex-direction: column; }
+}
+@media (max-width: 480px) {
+  .shop-view, .shop-form { padding: 16px; }
+  .coord-display { flex-direction: column; gap: 4px; }
+}
